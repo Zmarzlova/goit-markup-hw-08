@@ -1,33 +1,70 @@
 .hero {
-    padding: 200px 0;
+    padding: 118px 0;
     text-align: center;
   
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-bg.jpg);
+      url(../images/hero-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     max-width: 1600px;
     margin: 0 auto;
+    @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-mob-2x.jpg);
+    }
+    @include tablet {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+       rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tablet.jpg);
+      @include retina {
+         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+         rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tablet-2x.jpg);
+        }
+      }
+    @include desktop {
+      padding: 200px 0;
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+          url(../images/hero-bg.jpg);
+     @include retina {
+       background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-2x.jpg);
+        }
+    }
   }
   
   .hero__title {
     color: var(--additional-color);
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 20px;
+    line-height: 1.62;
   
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    width: 696px;
-    height: 120px;
+    max-width: 320px;
+    height: 64px;
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: auto;
+    @include mobile {
+      font-size: 26px;
+      max-width: 360px;
+      height: 84px;
+    }
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+      height: 120px;
+    }
   }
   
   .hero__button {
@@ -49,4 +86,8 @@
     border-radius: 4px;
     margin: 0 auto;
     border: none;
+    @include desktop {
+      padding: 10px 24px;
+      min-width: 200px;
+    }
   }

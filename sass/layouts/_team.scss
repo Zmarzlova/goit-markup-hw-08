@@ -5,12 +5,17 @@
   
   .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
   
   .team-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @include desktop {
+      margin-bottom: 50px;
+      }
   }
+
   .team-title-secondary {
     color: var(--title-text-color);
     font-weight: 500;
@@ -22,7 +27,13 @@
   }
   
   .team-item {
-    width: calc((100% - 90px) / 4);
+    width: 100%;
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+      }
+    @include desktop {
+        width: calc((100% - 90px) / 4);
+      }
   }
   
   .team-wrap {

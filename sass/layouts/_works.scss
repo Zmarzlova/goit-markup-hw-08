@@ -1,4 +1,11 @@
 
+.works {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}
+
 .works-title {
     margin-bottom: 50px;
   }
@@ -15,10 +22,13 @@
   .works-title,
   .team-title {
     color: var(--title-text-color);
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    @include desktop {
+    font-size: 36px;
+    }
   }
   .works-top {
     display: flex;

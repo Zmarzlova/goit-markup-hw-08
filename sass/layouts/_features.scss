@@ -1,12 +1,17 @@
 
 .features {
+    padding-bottom: 60px;
+    @include desktop {
     padding-bottom: 0;
+    }
   }
   
   .features__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
+
   .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -30,7 +35,13 @@
   }
   
   .features__item {
-    width: 270px;
+    width: 100%;
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+      }
+      @include desktop {
+        width: calc((100% - 90px) / 4);
+      }
   }
 
   .features__text {
@@ -39,12 +50,13 @@
   
   .features__icons {
     display: flex;
-    width: 270px;
+    width: 100%;
     height: 120px;
     align-items: center;
     justify-content: center;
     background-color: #f5f4fa;
     border-radius: 4px;
     margin-bottom: 30px;
+   
   }
   
