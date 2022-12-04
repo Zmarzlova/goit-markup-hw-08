@@ -150,7 +150,7 @@
     z-index: 1;
     padding-top: 48px;
     padding-bottom: 48px;
-    position: relative;
+  /*   position: relative; */
     > .container {
       height: 100%;
       display: flex;
@@ -164,10 +164,6 @@
         @include tablet {
           display: none;
         }
-  }
-
-  .menu-top {
-   /*  position: relative; */
   }
 
   .menu-close {
@@ -219,8 +215,6 @@
       padding-bottom: 64px;
      }
   
-     .menu-connect-list {}
-  
      .menu-connect-item {
       margin-bottom: 32px;
      }
@@ -243,8 +237,6 @@
   letter-spacing: 0.02em;
   color: #757575;
      }
-  
-     .soc-menu {}
   
      .soc-menu-list {
       display: flex;
