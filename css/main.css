@@ -200,6 +200,11 @@ button {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
 
 .features__item {
   width: 100%;
@@ -255,10 +260,15 @@ button {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-contacts {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -267,8 +277,10 @@ button {
   }
 }
 
-.footer-left {
-  margin-bottom: 60px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-left {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-left {
@@ -279,7 +291,6 @@ button {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer-right {
-    margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -467,6 +478,11 @@ button {
   background-color: var(--additional-color);
   border-bottom: 1px solid #ececec;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+}
 
 .container__header {
   display: flex;
@@ -502,12 +518,6 @@ button {
     gap: 50px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .header-nav__list {
-    display: flex;
-    gap: 50px;
-  }
-}
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-list {
@@ -536,11 +546,21 @@ button {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-right: 93px;
   margin-left: auto;
 }
 .logo:hover, .logo:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 93px;
+  }
 }
 
 .logo-header {
@@ -566,15 +586,17 @@ button {
   position: relative;
 }
 
-.current::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background-color: #2196f3;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .current::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
 }
 
 .header-link {
@@ -590,6 +612,11 @@ button {
 .header-link:hover, .header-link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-link {
+    font-size: 12px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header-link {
     padding-top: 32px;
@@ -603,6 +630,7 @@ button {
 
 .menu-open {
   margin-left: auto;
+  margin-top: 10px;
   background-color: transparent;
   border: none;
 }
@@ -618,9 +646,7 @@ button {
   top: 0;
   position: fixed;
   z-index: 1;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  /*   position: relative; */
+  padding: 48px 40px;
   background-color: var(--additional-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
@@ -677,6 +703,10 @@ button {
   color: var(--accent-color);
 }
 
+.header-menu-link.current {
+  color: var(--accent-color);
+}
+
 .menu-connect {
   padding-bottom: 64px;
 }
@@ -700,10 +730,15 @@ button {
 
 .menu-mail-link {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 14px;
   line-height: 1, 17;
   letter-spacing: 0.02em;
   color: #757575;
+}
+@media screen and (min-width: 480px) {
+  .menu-mail-link {
+    font-size: 24px;
+  }
 }
 
 .soc-menu-list {
@@ -807,8 +842,8 @@ button {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
-  min-width: 216px;
+  padding: 10px 24px;
+  min-width: 200px;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -817,8 +852,8 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .hero__button {
-    padding: 10px 24px;
-    min-width: 200px;
+    padding: 10px 32px;
+    min-width: 216px;
   }
 }
 
@@ -999,12 +1034,19 @@ button {
 }
 
 .checkbox-label {
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
   margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-label span {

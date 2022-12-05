@@ -171,12 +171,17 @@
   }
   
   .checkbox-label{
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
   margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   }
   
   .checkbox-label span{

@@ -1,6 +1,9 @@
 .header {
     background-color: var(--additional-color);
     border-bottom: 1px solid #ececec;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        height: 60px; 
+      }
   }
   
   .container__header {
@@ -30,10 +33,6 @@
       display: flex;
       gap: 50px;
     }
-      @include desktop {
-        display: flex;
-        gap: 50px;
-      }
   }
   
   .header-list {
@@ -61,12 +60,20 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    margin-right: 93px;
+    
     margin-left: auto;
     &:hover,
     &:focus {
     color: var(--accent-color);
   }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 1.17;
+    }
+    @include tablet {
+     margin-right: 93px;
+    }
+
 }
   
   .logo-header {
@@ -96,7 +103,8 @@
   }
   
   .current::after {
-    content: " ";
+    @include tablet {
+        content: " ";
     display: block;
     position: absolute;
     bottom: 0;
@@ -104,7 +112,8 @@
     width: 100%;
   
     background-color: #2196f3;
-    border-radius: 2px;
+    border-radius: 2px; 
+      }
   }
   
   .header-link {
@@ -123,6 +132,9 @@
     &:focus {
     color: var(--accent-color);
   }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 12px;
+    }
   @include desktop {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -135,6 +147,7 @@
 
   .menu-open {
  margin-left: auto;
+ margin-top: 10px;
  background-color: transparent;
  border: none;
  @include tablet {
@@ -148,9 +161,7 @@
     top: 0;
     position: fixed;
     z-index: 1;
-    padding-top: 48px;
-    padding-bottom: 48px;
-  /*   position: relative; */
+    padding: 48px 40px;
     > .container {
       height: 100%;
       display: flex;
@@ -211,6 +222,10 @@
   }
    }
 
+   .header-menu-link.current {
+    color: var(--accent-color);
+   }
+
      .menu-connect {
       padding-bottom: 64px;
      }
@@ -232,10 +247,13 @@
 
      .menu-mail-link {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 14px;
   line-height: 1,17;
   letter-spacing: 0.02em;
   color: #757575;
+  @include mobile {
+      font-size: 24px;
+    }
      }
   
      .soc-menu-list {

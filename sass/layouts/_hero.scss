@@ -79,15 +79,15 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    padding: 10px 32px;
-    min-width: 216px;
+    padding: 10px 24px;
+    min-width: 200px;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin: 0 auto;
     border: none;
     @include desktop {
-      padding: 10px 24px;
-      min-width: 200px;
+      padding: 10px 32px;
+      min-width: 216px;
     }
   }
